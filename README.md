@@ -9,6 +9,9 @@
   # cd ~stagiaire
   # ./install-kubectl.sh
   ```
+* Paramètrage *sysctl*
+
+  # ./sysctl.sh
 
 * Configuration du client `kubectl`
   ```
