@@ -1,29 +1,18 @@
 # Installation/configuration d'un clusteur de démonstration avec Kind
 
-* Installation du client `kubectl`
-
-  NB: À faire en tant que *root*
+* Opération en tant que *root*
 
   ```
   $ su -
-  # cd ~stagiaire
-  # ./install-kubectl.sh
-  ```
-* Paramètrage *sysctl*
-
-  # ./sysctl.sh
-
-* Configuration du client `kubectl`
-  ```
-  $ ./config-kubectl.sh
+  # cd ~stagiaire/kind-install
+  # ./01-install-kubectl.sh
+  # ./02-sysctl.sh
   ```
 
-* Installation de Kind
-
-  Quatre nodes : 1 Control-plane et 3 workers
-
+* Opération en tant que *stagiaire*
   ```
-  $ ./init-kind.sh
+  $ ./03-config-kubectl.sh
+  $ ./04-init-kind.sh
   ```
 
 * Installation du *metrics-server*
