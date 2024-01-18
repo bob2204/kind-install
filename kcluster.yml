@@ -11,7 +11,7 @@ kubeadmConfigPatches:
   kind: ClusterConfiguration
   apiServer:
       extraArgs:
-        enable-admission-plugins: AlwaysPullImages,NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota
+        enable-admission-plugins: AlwaysPullImages
 nodes:
 - role: control-plane
 - role: worker
