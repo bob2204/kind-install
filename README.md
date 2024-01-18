@@ -1,6 +1,6 @@
 # Installation/configuration d'un clusteur de démonstration avec Kind
 
-* Opération en tant que *root*
+* Opérations en tant que *root*
 
   ```
   $ su -
@@ -9,7 +9,7 @@
   # ./02-sysctl.sh
   ```
 
-* Opération en tant que *stagiaire*
+* Opérations en tant que *stagiaire*
   ```
   $ ./03-config-kubectl.sh
   $ ./04-init-kind.sh
