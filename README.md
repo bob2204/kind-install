@@ -5,14 +5,15 @@
   ```
   $ su -
   # cd ~stagiaire/kind-install
-  # ./01-install-kubectl.sh
-  # ./02-sysctl.sh
+  # ./01-sysctl.sh
+  # ./02-install-kubectl.sh
+  # ./03-install-helm.sh
   ```
 
 * Opérations en tant que *stagiaire*
   ```
-  $ ./03-config-kubectl.sh
-  $ ./04-init-kind.sh
+  $ ./04-config-kubectl.sh
+  $ ./05-init-kind.sh
   ```
 
 * Installation du *metrics-server*
