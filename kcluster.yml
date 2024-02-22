@@ -6,6 +6,7 @@ networking:
   disableDefaultCNI: true
   podSubnet: 172.16.0.0/16
   kubeProxyMode: "iptables"
+  apiServerAddress: ${IPV4}
 #- |
 #  kind: ClusterConfiguration
 #  apiServer:
@@ -13,7 +14,9 @@ networking:
 #        enable-admission-plugins: AlwaysPullImages,...
 nodes:
 - role: control-plane
+  image: kindest/node:v1.29.2@sha256:51a1434a5397193442f0be2a297b488b6c919ce8a3931be0ce822606ea5ca245
 - role: worker
+  image: kindest/node:v1.29.2@sha256:51a1434a5397193442f0be2a297b488b6c919ce8a3931be0ce822606ea5ca245
   extraMounts:
   - hostPath: data/
     containerPath: /data
@@ -21,6 +24,7 @@ nodes:
     selinuxRelabel: false
     propagation: Bidirectional
 - role: worker
+  image: kindest/node:v1.29.2@sha256:51a1434a5397193442f0be2a297b488b6c919ce8a3931be0ce822606ea5ca245
   extraMounts:
   - hostPath: data/
     containerPath: /data
@@ -28,6 +32,7 @@ nodes:
     selinuxRelabel: false
     propagation: Bidirectional
 - role: worker
+  image: kindest/node:v1.29.2@sha256:51a1434a5397193442f0be2a297b488b6c919ce8a3931be0ce822606ea5ca245
   extraMounts:
   - hostPath: data/
     containerPath: /data
