@@ -6,6 +6,11 @@ networking:
   disableDefaultCNI: true
   podSubnet: 172.16.0.0/16
   kubeProxyMode: "iptables"
+#- |
+#  kind: ClusterConfiguration
+#  apiServer:
+#      extraArgs:
+#        enable-admission-plugins: AlwaysPullImages,...
 nodes:
 - role: control-plane
 - role: worker
