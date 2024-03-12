@@ -1,5 +1,12 @@
 # Installation/configuration d'un clusteur de démonstration avec Kind
 
+***Remarque***
+Le script *05-init-kind.sh* est destiné à une VM Virtualbox. Pour toute autre installation, vérifier le nom de l'interface réseau (TODO).
+
+* Configuration des variables d'environnement
+
+  Fichier *env.conf*
+
 * Opérations en tant que *root*
 
   ```
@@ -12,7 +19,7 @@
 
 * Opérations en tant que *stagiaire*
   ```
-  $ ./04-config-kubectl.sh
+  $ ./04-config-kubectl-helm.sh
   $ ./05-init-kind.sh
   ```
 
