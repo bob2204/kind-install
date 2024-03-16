@@ -16,7 +16,7 @@ source env.conf
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-${KIND_ARCH}
 chmod +x ./kind
 
-export IPV4=$(ip -f inet address show enp0s8|grep -Po 'inet \K[\d.]+')
+export IPV4=$(ip -f inet address show ${KIND_IFACE}|grep -Po 'inet \K[\d.]+')
 ./kind create cluster --name=${KIND_CLUSTER_NAME} --config=<(envsubst < kcluster.yml)
 
 # Attendre un peu...
