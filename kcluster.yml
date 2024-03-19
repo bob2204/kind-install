@@ -5,7 +5,7 @@ name: stage
 networking:
   disableDefaultCNI: true
   podSubnet: 172.16.0.0/16
-  kubeProxyMode: "iptables"
+  kubeProxyMode: none
   apiServerAddress: ${IPV4}
 #- |
 #  kind: ClusterConfiguration
