@@ -15,6 +15,7 @@ Le script *05-init-kind.sh* est destiné à une VM Virtualbox. Pour toute autre 
   # ./01-sysctl.sh
   # ./02-install-kubectl.sh
   # ./03-install-helm.sh
+  # ./03-install-kind-cloud-provider.sh
   ```
 
 * Opérations en tant que *stagiaire*
