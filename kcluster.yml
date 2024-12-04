@@ -2,17 +2,28 @@
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 name: stage
+kubeadmConfigPatches:
+- |
+  kind: InitConfiguration
+  nodeRegistration:
+    kubeletExtraArgs:
+      rotate-server-certificates: "true"
+- |
+  kind: JoinConfiguration
+  nodeRegistration:
+    kubeletExtraArgs:
+      rotate-server-certificates: "true"
+#- |
+#  kind: ClusterConfiguration
+#  apiServer:
+#      extraArgs:
+#        enable-admission-plugins: AlwaysPullImages,...
 networking:
   disableDefaultCNI: true
   podSubnet: 10.32.0.0/16
   serviceSubnet: 172.16.0.0/16
   kubeProxyMode: "iptables"
   apiServerAddress: ${IPV4}
-#- |
-#  kind: ClusterConfiguration
-#  apiServer:
-#      extraArgs:
-#        enable-admission-plugins: AlwaysPullImages,...
 nodes:
 - role: control-plane
   image: ${KIND_NODE_IMAGE}
