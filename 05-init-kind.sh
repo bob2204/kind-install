@@ -11,6 +11,10 @@ set -o errexit
 
 source env.conf
 
+# Création du répertoire de travail
+
+mkdir -p $WORKDIR/data
+
 # Initialisation du clusteur 'stage'
 
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-${KIND_ARCH}

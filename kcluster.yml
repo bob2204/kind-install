@@ -18,7 +18,7 @@ nodes:
 - role: worker
   image: ${KIND_NODE_IMAGE}
   extraMounts:
-  - hostPath: data/
+  - hostPath: ${WORKDIR/data}
     containerPath: /data
     readOnly: false
     selinuxRelabel: false
@@ -26,7 +26,7 @@ nodes:
 - role: worker
   image: ${KIND_NODE_IMAGE}
   extraMounts:
-  - hostPath: data/
+  - hostPath: ${WORKDIR/data}
     containerPath: /data
     readOnly: false
     selinuxRelabel: false
@@ -34,7 +34,7 @@ nodes:
 - role: worker
   image: ${KIND_NODE_IMAGE}
   extraMounts:
-  - hostPath: data/
+  - hostPath: ${WORKDIR/data}
     containerPath: /data
     readOnly: false
     selinuxRelabel: false
