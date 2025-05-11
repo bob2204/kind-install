@@ -34,5 +34,5 @@ sleep 30
 
 # Installation du CNI *Calico*
 
-kubectl apply -f calico.yml
+kubectl apply -f calico-v3.30.0.yml
 
